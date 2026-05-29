@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Splunk Dashboard Mockups | OPSTAT Demo Gallery</title>
+  <meta name="description" content="Static Cloudflare Pages demo gallery for Splunk OPSTAT dashboard mockups." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="OPSTAT Dashboard Mockups home">
+        <span class="brand-mark">OP</span>
+        <span>Splunk Dashboard Mockups</span>
+      </a>
+      <div class="navlinks">
+        <a href="#dashboards">Dashboards</a>
+        <a href="#setup">Splunk setup notes</a>
+        <a href="source/B-Mock-ups.pdf">Source PDF</a>
+      </div>
+    </nav>
+
+    <section id="top" class="hero-grid">
+      <div>
+        <p class="eyebrow">Stakeholder demo gallery</p>
+        <h1>OPSTAT dashboard concepts for Splunk implementation planning.</h1>
+        <p class="lead">Use this static site to walk stakeholders through the current dashboard mockups, identify required telemetry, and turn each concept into a Splunk dashboard build backlog.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#dashboards">View mockups</a>
+          <a class="button secondary" href="#setup">Implementation notes</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Demo summary">
+        <div class="metric"><span>6</span><small>source pages</small></div>
+        <div class="metric"><span>5</span><small>primary OPSTAT dashboard families</small></div>
+        <div class="metric"><span>Cloudflare Pages</span><small>no build step required</small></div>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="section intro">
+      <div>
+        <p class="section-label">Purpose</p>
+        <h2>Convert visual concepts into Splunk build conversations.</h2>
+      </div>
+      <p>This page is intentionally simple: each card shows the mockup, its stakeholder purpose, expected Splunk content, and likely data sources. It is ready to deploy as a static Cloudflare Pages site.</p>
+    </section>
+
+    <section id="dashboards" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Dashboard list</p>
+          <h2>Splunk dashboard mockups</h2>
+        </div>
+        <div class="filter-bar" aria-label="Dashboard filter">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="Security">Security</button>
+          <button class="filter" data-filter="Operations">Operations</button>
+          <button class="filter" data-filter="Engineering">Engineering</button>
+          <button class="filter" data-filter="Workforce">Workforce</button>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="dashboard-card" data-category="Security" id="opstat-border">
+          <a class="image-link" href="assets/mockup-page-1.webp" aria-label="Open OPSTAT Border mockup image">
+            <img src="assets/mockup-page-1-thumb.webp" alt="OPSTAT-BORDER mockup with border security risk statistics, investigation cases, and traveler risk views" />
+          </a>
+          <div class="card-body">
+            <div class="tag-row"><span class="tag">Security</span><span class="tag muted">Border operations</span></div>
+            <h3>OPSTAT-BORDER</h3>
+            <p>Border security executive and analyst dashboard for traveler risk, watchlist matches, investigation cases, port summaries, and intelligence correlation.</p>
+            <ul>
+              <li>Traveler risk score distribution and high-risk alerts</li>
+              <li>Investigation case queue with assigned agents and status</li>
+              <li>Port ops summary, live traveler feed, and watchlist matches</li>
+            </ul>
+            <a class="text-link" href="assets/mockup-page-1.webp">Open full mockup</a>
+          </div>
+        </article>
+
+        <article class="dashboard-card" data-category="Security" id="opstat-vsoc">
+          <a class="image-link" href="assets/mockup-page-2.webp" aria-label="Open OPSTAT VSOC mockup image">
+            <img src="assets/mockup-page-2-thumb.webp" alt="OPSTAT-VSOC mockups showing security overview, change and baseline views, and cybersecurity metrics" />
+          </a>
+          <div class="card-body">
+            <div class="tag-row"><span class="tag">Security</span><span class="tag muted">VSOC / CSIRT</span></div>
+            <h3>OPSTAT-VSOC</h3>
+            <p>Cybersecurity operations and risk posture dashboard family covering monitoring, incidents, vulnerabilities, patching, threat intelligence, and compliance evidence.</p>
+            <ul>
+              <li>MTTD, MTTR, critical vulnerabilities, and patch SLA views</li>
+              <li>Security overview, baseline change tracking, and alert streams</li>
+              <li>Compliance, threat intelligence, privileged access, and third-party metrics</li>
+            </ul>
+            <a class="text-link" href="assets/mockup-page-2.webp">Open full mockup</a>
+          </div>
+        </article>
+
+        <article class="dashboard-card" data-category="Operations" id="opstat-itops">
+          <a class="image-link" href="assets/mockup-page-3.webp" aria-label="Open OPSTAT ITOPS mockup image">
+            <img src="assets/mockup-page-3-thumb.webp" alt="OPSTAT-ITOPS mockups showing IT operations SLA, posture score, infrastructure, application, and server health panels" />
+          </a>
+          <div class="card-body">
+            <div class="tag-row"><span class="tag">Operations</span><span class="tag muted">IT service health</span></div>
+            <h3>OPSTAT-ITOPS</h3>
+            <p>IT operations dashboard focused on uptime, patch posture, infrastructure health, API availability, synthetic monitoring, tickets, and recommended actions.</p>
+            <ul>
+              <li>SLA, posture score, vulnerability, cloud, and firewall coverage</li>
+              <li>Network edge, server, PRTG, CloudWatch, and EKS views</li>
+              <li>Tickets opened/closed, SLA breached, and recommended actions</li>
+            </ul>
+            <a class="text-link" href="assets/mockup-page-3.webp">Open full mockup</a>
+          </div>
+        </article>
+
+        <article class="dashboard-card" data-category="Engineering" id="opstat-devops">
+          <a class="image-link" href="assets/mockup-page-4.webp" aria-label="Open OPSTAT DevOps mockup image">
+            <img src="assets/mockup-page-4-thumb.webp" alt="OPSTAT-DEVOPS mockups showing software development dashboard, API latency, GitHub activity, EKS status, and RUM web app errors" />
+          </a>
+          <div class="card-body">
+            <div class="tag-row"><span class="tag">Engineering</span><span class="tag muted">DevOps / RUM</span></div>
+            <h3>OPSTAT-DEVOPS</h3>
+            <p>Software delivery and application health dashboard for development throughput, container status, synthetic checks, API latency, and real user monitoring errors.</p>
+            <ul>
+              <li>Active users, API requests, uptime, and latency</li>
+              <li>EKS CPU/memory, pod status, GitHub commits, pull requests, and code reviews</li>
+              <li>RUM web app errors, code errors, network errors, and affected sessions</li>
+            </ul>
+            <a class="text-link" href="assets/mockup-page-4.webp">Open full mockup</a>
+          </div>
+        </article>
+
+        <article class="dashboard-card" data-category="Workforce" id="opstat-workforce">
+          <a class="image-link" href="assets/mockup-page-5.webp" aria-label="Open OPSTAT Workforce mockup image">
+            <img src="assets/mockup-page-5-thumb.webp" alt="OPSTAT-WORKFORCE mockups showing staff activity, ticket aging, call center, IT service desk, and productivity views" />
+          </a>
+          <div class="card-body">
+            <div class="tag-row"><span class="tag">Workforce</span><span class="tag muted">Capacity planning</span></div>
+            <h3>OPSTAT-WORKFORCE</h3>
+            <p>Workforce availability and service delivery concept for staffing calendars, PTO, on-call coverage, ticket aging, service desk activity, and aggregate productivity signals.</p>
+            <ul>
+              <li>Working calendar, upcoming PTO, and on-call coverage</li>
+              <li>Availability calculations with PTO deductions</li>
+              <li>Aggregate activity, idle, checked-out, and shadow-system usage indicators</li>
+            </ul>
+            <a class="text-link" href="assets/mockup-page-5.webp">Open full mockup</a>
+          </div>
+        </article>
+
+        <article class="dashboard-card" data-category="Operations" id="access-denied">
+          <a class="image-link" href="assets/mockup-page-6.webp" aria-label="Open access denied signage mockup image">
+            <img src="assets/mockup-page-6-thumb.webp" alt="Access denied screen with QR code for blocked unapproved network access request" />
+          </a>
+          <div class="card-body">
+            <div class="tag-row"><span class="tag">Operations</span><span class="tag muted">Access workflow</span></div>
+            <h3>Access Denied / QR Request Flow</h3>
+            <p>Network access denial screen concept that routes blocked users or signage devices into an authorization request workflow.</p>
+            <ul>
+              <li>Detected IP address, device ID, and location</li>
+              <li>QR-code submission path to support or ServiceNow</li>
+              <li>Useful companion flow for NAC, guest access, or signage onboarding</li>
+            </ul>
+            <a class="text-link" href="assets/mockup-page-6.webp">Open full mockup</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="setup" class="section setup-section">
+      <div>
+        <p class="section-label">Splunk implementation notes</p>
+        <h2>Recommended build backlog</h2>
+      </div>
+      <div class="setup-grid">
+        <div class="setup-card">
+          <h3>1. Confirm dashboard owners</h3>
+          <p>Assign a business owner and technical owner for each OPSTAT dashboard before building SPL searches, alert logic, and permissions.</p>
+        </div>
+        <div class="setup-card">
+          <h3>2. Map data sources</h3>
+          <p>Prioritize Splunk Enterprise, OpenTelemetry, AWS CloudWatch, AWS CloudTrail, ServiceNow, PRTG, PagerDuty, Slack, GitHub/GitLab, Tenable, and border/intelligence feeds.</p>
+        </div>
+        <div class="setup-card">
+          <h3>3. Define metric contracts</h3>
+          <p>Normalize field names, service names, event types, timestamps, severities, owners, and SLAs before dashboard buildout.</p>
+        </div>
+        <div class="setup-card">
+          <h3>4. Build demo indexes first</h3>
+          <p>Use synthetic or masked sample data for stakeholder demos, then replace with production indexes as connectors and ingestion pipelines are approved.</p>
+        </div>
+        <div class="setup-card">
+          <h3>5. Keep workforce views privacy-safe</h3>
+          <p>Use aggregated workflow, ticket, availability, and system telemetry. Do not build keystroke, screenshot, webcam, mouse tracking, message-content, or per-user scoring dashboards.</p>
+        </div>
+        <div class="setup-card">
+          <h3>6. Create alert-to-workflow handoffs</h3>
+          <p>For actionable panels, define ServiceNow ticket creation, PagerDuty escalation, Slack notification, and owner assignment rules.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Static stakeholder demo site for Splunk OPSTAT dashboard mockups.</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+
+  <dialog id="previewDialog" aria-label="Dashboard mockup preview">
+    <button class="dialog-close" aria-label="Close preview">×</button>
+    <img id="previewImage" alt="Selected dashboard mockup preview" />
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
